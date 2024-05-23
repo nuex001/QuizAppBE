@@ -91,7 +91,7 @@ router.put("/", async (req, res) => {
 router.get("/", auth, async (req, res) => {
   try {
     const { id } = req.user;
-    const user = await User.findById(id);
+    const user = await User.findById(id).select("-password");
     res.json(user);
   } catch (error) {
     res.status(500).json(error.message);

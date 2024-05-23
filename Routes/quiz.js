@@ -40,7 +40,7 @@ router.post("/", auth, async (req, res) => {
     ) {
       return res
         .status(400)
-        .json({ err: "Already attempted a quiz today!,Try again Tomorrow!" });
+        .json({ err: "You've already attempted a quiz today! Please try again tomorrow 🤭" });
     }
     if (!quiz) {
       return res.status(404).json({ err: "Quiz not found!" });
