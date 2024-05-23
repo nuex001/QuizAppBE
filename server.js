@@ -17,7 +17,7 @@ const auth = require("./middleWare/auth");
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow this origin
+    origin: "https://quizfe.netlify.app", // Allow this origin
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE", // Allow these HTTP methods
     credentials: true, // Allow cookies to be sent
   })
